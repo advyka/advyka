@@ -1,0 +1,138 @@
+body {
+    background-image: radial-gradient(circle at center center, transparent, rgb(33, 33, 33)), repeating-linear-gradient(135deg, rgb(33, 33, 33) 0px, rgb(33, 33, 33) 2px, transparent 2px, transparent 10px, rgb(33, 33, 33) 10px, rgb(33, 33, 33) 11px, transparent 11px, transparent 21px), repeating-linear-gradient(45deg, rgb(47, 47, 47) 0px, rgb(47, 47, 47) 4px, transparent 4px, transparent 8px), linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    height: 900px;
+}
+.container1 {
+    height: 900px;
+}
+
+#eventName {
+    color: white;
+    font-weight: 500;
+    font-size: 60px;
+}
+h2{
+    position: absolute;
+    left: 45%;
+    margin-top: -10px;
+}
+.back {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 600px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+#about{
+    margin-top: -390px;
+    margin-left: -250px;
+}
+a:hover {
+    transition: 0.5s ease;
+    color: black;
+    background-color: white;
+}
+.back.not-found{
+    margin-left: 850px;
+}
+
+.event-details {
+    height: auto;
+    display: inline;
+    color: white;
+    padding-right: 30px;
+}
+
+.event-poster {
+    width: 400px;
+    margin-left: 100px;
+    margin-top: -30px;
+}
+
+.register {
+    font-size: 20px;
+    /* position: absolute;
+    top: 80%;
+    left: 20%; */
+    height: auto;
+    padding-top: 100px;
+    margin-left: 650px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.register:hover {
+    transition: 0.5s ease;
+    color: rgb(255, 255, 255);
+    background-color: rgb(125, 2, 2);
+}
+
+.event-details p {
+    font-size: 25px;
+    margin-top: -380px;
+    padding-top: 20px;
+    padding-left:600px;
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+    .container1{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    #about{
+        margin-top: 0px;
+        margin-left: -180px;
+    }
+    #eventName {
+        margin-left: 0;
+        padding-right: 0;
+        padding-top: 0px;
+        text-align: center;
+    }
+    .event-details{
+        height: auto;
+    }
+    .register {
+        margin-left: 100px;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .event-poster {
+        margin: 20px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .event-details p {
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 80px;
+    }
+    .back{
+        width: 60px;
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 145px;
+        /* margin-right: 100px; */
+        margin-bottom: 50px;
+        /* padding-right: 10px; */
+    }
+    .back.not-found{
+        margin-left: 130px;
+    }
+}

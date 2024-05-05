@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Event</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <div class="container1">
+        <center><h1 id="eventName"></h1></center>
+        <center><h1 id="deptname"></h1></center>
+        <div class="event-details">
+            <div class="event-poster" id="eventPoster"></div>
+            <h2 id="about">ABOUT :</h2>
+            <p id="eventDetails"></p>
+            <a href="" class="register" id="registerlink">REGISTER NOW</a>
+            
+        </div>
+        <a href="advyka.html#search-box" class="back">Back to Search</a>
+        
+    </div>
+    <script>
+        // Function to get query parameter from URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Event data
+        const events = [
+            {   
+                deptname:"MECH",
+                name: "Battleground mobile india",
+                posterUrl: "bgmi.jpg",
+                details: "𝗥𝗘𝗔𝗗𝗬 𝗧𝗢 𝗦𝗛𝗢𝗪 𝗬𝗢𝗨𝗥 𝗦𝗞𝗜𝗟𝗟𝗦, 𝗟𝗢𝗔𝗗 𝗬𝗢𝗨𝗥 𝗚𝗨𝗡𝗦 𝗔𝗡𝗗 𝗚𝗘𝗧 𝗥𝗘𝗔𝗗𝗬 𝗧𝗢 𝗧𝗔𝗦𝗧𝗘 𝗧𝗛𝗘 𝗕𝗔𝗧𝗧𝗟𝗘𝗙𝗜𝗘𝗟",
+                link:"",
+                // Add more event details as needed
+            },
+            {
+                deptname:"MECH",
+                name: "Marvel quiz",
+                posterUrl: "mquiz.jpg",
+                details: "“Avengers, assemble!” \nTRAMS, The Royal Association of Mechanical Students at College of Engineering Perumon in association with our Techno-cultural fest Advyka'24 presents...\n\nMARVEL QUIZ\n\n▫ MAY 10 \n\n▫ Venue: Lecture hall, Mech Block\n▫ Offline Mode\n▫ Registration fee: 40/- per team of 2 Participants...\n▫ PRIZES WORTH 750 Rs..!!\n▫ Limited slots...!!\n\nFor any queries, contact the coordinators\n\nVasudev G-9037374709\nManu-8921398143",
+                link:"https://forms.gle/uxrthYhFPnitdFwX8",
+                // Add more event details as needed
+            },
+            {
+                deptname:"MECH",
+                name: "Football tournament",
+                posterUrl: "football.jpg",
+                details: "Gear up, lace your virtual boots, and step onto the digital pitch for TRAMS EFOOTBALL tournament like no other❕ Calling all eFootball enthusiasts across India! It's time to unite and compete in the ultimate showdown. Join us for the All Kerala eFootball Tournament, where the thrill of the game meets the innovation of the digital world. ‼ ONLY LIMITED SLOTS ‼ So what are you waiting for Anyone from India can participate and enjoy an exciting cash prize of ₹1.5K! 𝘎𝘦𝘵 𝘳𝘦𝘢𝘥𝘺 𝘵𝘰 𝘬𝘪𝘤𝘬 𝘰𝘧𝘧 ! For any enquiries contact : Abhishek :+91 96337 09648 Niranjan :+91 8547207066 Ajesh. :+91 99954 46338 Registration deadline : 3 May 2024 Tournament starts : 4 May 2024",
+                link:"https://forms.gle/rXJmRxtMhuCNQXZD7",
+                // Add more event details as needed
+            },
+            {
+                deptname:"EEE",
+                name: "Tech xplore",
+                posterUrl: "techxplore.jpg",
+                details: "Hey everyone! 🌟Are you ready for an electrifying event at ADVYKA'24? 🚀Join us for the VIDYUTH 6.0 Technical Quiz and put your tech knowledge to the test!💡💻 Get ready to showcase your skills and compete against other brilliant minds in this exciting quiz. 🏆 We have some amazing prizes waiting for the winners, so make sure to bring your A-game!💰 Don't miss out on this opportunity to challenge yourself and have a blast with like-minded individuals. 🎉 Save the date and be there at ADVYKA'24 to be a part of this thrilling event! See you all at VIDYUTH 6.0! Let's make it an unforgettable experience together!😉✨ 🗓Date: 12th May 2024 ⏰Time: 10am to 11am 📝Registration fees: Rs 20 🏫 Venue: College of Engineering Perumon 🏆 Prize Pool: Rs 700/- Guidelines: • 20 questions are given • Time allotted - 15 Min Co-ordinators: Neeraja Biju: 9544130676 Rarima R S: 9656614241 #VIDYUTH6 #ADVYKA24 #TechnicalQuiz #TechKnowledge #Competition #Prizes #ExcitingEvent",
+                link:"https://forms.gle/W7qdeitvjK6spJsu8",
+                // Add more event details as needed
+            },
+            {
+                deptname:"EEE",
+                name: "Anime Quiz",
+                posterUrl: "animequiz.jpg",
+                details: "Hey everyone! 🌟 Are you ready to test your anime knowledge at ADVYKA'24? 🚀 Join us for the VIDYUTH 6.0 Anime Quiz and dive into the world of your favorite anime series! 🎉🔥 Get ready to showcase your expertise and compete against other anime enthusiasts in this thrilling quiz. 🏆 We have some amazing prizes up for grabs, so make sure to bring your A-game and show off your otaku skills! 💰💡 Don't miss out on this opportunity to challenge yourself and have a blast with fellow anime lovers. 🌸 Save the date and be there at ADVYKA'24 to be a part of this unforgettable event! See you all at VIDYUTH 6.0! Let's make it an epic anime-filled experience together! 😉✨ PRIZE POOL: 700 Rs 📅 Date: May 11 ⏰ Time: 2:00 pm to 4:00 pm 📝 Registration Fees: Rs 20 🏫 Venue: College of Engineering Perumon Coordinators: Anjana: 9526033621 Aleena: 7306289856 Akhila: 8714446145 #VIDYUTH6 #ADVYKA24 #AnimeQuiz #AnimeKnowledge #Competition #Prizes #E",
+                link: "https://forms.gle/dRVLGVU6kWzCrWqU"
+                // Add more event details as needed
+            },
+            {
+                deptname:"EEE",
+                name: "Quantum Quest",
+                posterUrl: "quant.jpg",
+                details: "Get ready to unleash your inner physicist at VIDYUTH 6.0! ⚡Join us for an electrifying physics quiz and power up your brain! Don't miss out on the chance to win awesome prizes. See you there!💡 📆Date: 11th May 2024 🕑Time: 2:00pm - 4:00 pm 📝Registration Fees: Rs 20 🏤Venue: College of Engineering Perumon 🏆Prize Pool: 700/- Co-ordinators: Devi Nandana S:-6282 386246 Sruthi P:-8943813396 #VIDYUTH6.0 #ADVYKA24 #PhysicsQuiz #PowerUpYourBrain",
+                link: "https://forms.gle/YirU2QN3hQd4WB549"
+                // Add more event details as needed
+            },
+            {
+                deptname: "ECE",
+                name: "Treasure Hunt",
+                posterUrl: "treasure.jpg", // Add the URL of the event poster if available
+                details: "𝑻𝒓𝒆𝒂𝒔𝒖𝒓𝒆 𝒚𝒐𝒖𝒓 𝒆𝒙𝒑𝒆𝒓𝒊𝒆𝒏𝒄𝒆𝒔, 𝒏𝒐𝒕 𝒚𝒐𝒖𝒓 𝒑𝒐𝒔𝒔𝒆𝒔𝒔𝒊𝒐𝒏𝒔. -𝑷𝒂𝒖𝒍𝒐 𝑪𝒐𝒆𝒍𝒉𝒐\n\nEarnest, the Department of Electronics & Communication Engineering at College of Engineering Perumon, in collaboration with our Techno Cultural Fest, Advyka'24 is thrilled to unveil a special event\n\n🏴‍☠️ 𝕋𝕣𝕖𝕒𝕤𝕦𝕣𝕖 ℍ𝕦𝕟𝕥 🏴‍☠️\n\nJoin us for an exhilarating quest as we hunt for hidden treasures and explore uncharted territories.  challenging clues and locate the treasure before time elapses!\n\n📅 Date: 11 May 2024\n🕚 Time: 2pm\n\nJoin us on an exhilarating adventure for a Treasure Hunt!\n\nRegistration Fee: 60/- per team\n\n💰 Prize Pool: 3.5K\n\n𝘋𝘰𝘯'𝘵 𝘔𝘪𝘴𝘴 𝘖𝘶𝘵 𝘰𝘯 𝘵𝘩𝘦 𝘈𝘥𝘷𝘦𝘯𝘵𝘶𝘳𝘦!\n\n📲 For more details, contact:\n\nAlfia : http://wa.me/+918714376141\nAmisha : http://wa.me/+918078072537\n\nFollow our Instagram: https://www.instagram.com/earnest.cep?igsh=dTVxeGEyc2E2eWg=\n\n#Earnest #Advyka24 #Treasurehunt",
+                link: "https://forms.gle/2P1Vj15vEdKJFC2d8" // Add the registration link if available
+            },{
+    deptname: "ECE",
+    name: "IDEA PITCHING",
+    posterUrl: "idea.jpg", // Add the URL of the event poster if available
+    details: "“A person with a new idea is a crank until the idea succeeds“ -Mark Twain\n\nHola peeps ✨\n\nEarnest the Department of Electronics & Communication Engineering, College of Engineering Perumon in association with our Techno Cultural Fest Advyka'24 proudly presents the event.\n\n💡IDEA PITCHING💡\n\nDiversity in thought often leads to innovation. Let's make it happen.❗\n\n🗓Date: 12th May 2024\n⏲Time: 10:30 AM\n📍Venue: EC Seminar Hall\n\n📌Registration is open for individuals and teams (maximum of 3 members). Spot registration is also available.\n\nRegistration fee: ₹30 per team\n💰Prize pool : 3K\n\nFor queries, contact 📞\nAmitha:+919048027451\nAkheel:+919544706462\n\n#Earnest #Advyka'24 #Ideapitching",
+    link: "https://bit.ly/0IdeaPitching" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "BGMI TOURNAMENT ECE",
+    posterUrl: "bgmiece.jpg", // Add the URL of the event poster if available
+    details: "𝖁𝖎𝖈𝖙𝖔𝖗𝖞 𝖇𝖊𝖑𝖔𝖓𝖌𝖘 𝖙𝖔 𝖙𝖍𝖔𝖘𝖊 𝖜𝖍𝖔 𝖉𝖆𝖗𝖊 𝖙𝖔 𝖛𝖊𝖓𝖙𝖚𝖗𝖊 𝖎𝖓𝖙𝖔 𝖙𝖍𝖊 𝖚𝖓𝖐𝖓𝖔𝖜𝖓, 𝖙𝖔 𝖋𝖆𝖈𝖊 𝖙𝖍𝖊 𝖈𝖍𝖆𝖑𝖑𝖊𝖓𝖌𝖊𝖘 𝖍𝖊𝖆𝖉-𝖔𝖓, 𝖆𝖓𝖉 𝖙𝖔 𝖊𝖒𝖊𝖗𝖌𝖊 𝖙𝖗𝖎𝖚𝖒𝖕𝖍𝖆𝖓𝖙. 𝕴𝖓 𝖙𝖍𝖊 𝖇𝖆𝖙𝖙𝖑𝖊𝖌𝖗𝖔𝖚𝖓𝖉 𝖔𝖋 𝖑𝖎𝖋𝖊, 𝖔𝖓𝖑𝖞 𝖙𝖍𝖊 𝖇𝖔𝖑𝖉𝖊𝖘𝖙 𝖜𝖆𝖗𝖗𝖎𝖔𝖗𝖘 𝖈𝖑𝖆𝖎𝖒 𝖙𝖍𝖊 𝖚𝖑𝖙𝖎𝖒𝖆𝖙𝖊 𝖕𝖗𝖎𝖟𝖊.\n\nEarnest, the Department of Electronics & Communication Engineering at College of Engineering Perumon, in collaboration with our Techno Cultural Fest, Advyka'24 is ecstatic to share news of\n\n𝗕𝗚𝗠𝗜 𝗧𝗢𝗨𝗥𝗡𝗔𝗠𝗘𝗡𝗧🥷\n\n🎮 𝘾𝙖𝙡𝙡𝙞𝙣𝙜 𝘼𝙡𝙡 𝘽𝙖𝙩𝙩𝙡𝙚𝙜𝙧𝙤𝙪𝙣𝙙 𝙒𝙖𝙧𝙧𝙞𝙤𝙧𝙨! 🎮\n\nGear up, grab your weapons, and prepare for the ultimate showdown in our BGMI Tournament! Are you ready to prove your skills on the battlefield?\n\n📝 Save the Dates\n       7th - 9th May of 2024\n📍 Venue : online\n       Reg fee :  ₹ 60/-\n\n🏆 Prize Pool 5k\n\nWhat are you waiting for?\n\nFor any enquiries contact 📱our Co-ordinators\nChris- 9188604908\nAlbin -‪81370 50102",
+    link: "https://forms.gle/RzXCeJyUHthu8JcaA" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "BLITZ CURL Football Tournament",
+    posterUrl: "blitscurl.jpg", // Add the URL of the event poster if available
+    details: "\"It's not whether you get knocked down, it's whether you get back up.\"–Vince Lombardi\n\nEarnest'24 in association with our techno-cultural fest \"ADVYKA'24\" giving a chance for all football enthusiasts out there to experience a virtual football tournament\n\n⚽BLITZ CURL⚽\n\nWitness the football experience, offering immersive gameplay, realistic graphics, and the thrill of competing against friends.✨\n\n📆Date:1st May 2024-10th May 2024\n\nReg fee: 50/-\n\n💰Prize Pool: 2.5k\n\nFor information contact📱:\nVignesh:7306007622\nShillu:9207069367",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfzmY2vng_YRZ_r9LGx8JZICYdVPDbxPrAkrQ_r1tw_2wHAUg/viewform?usp=sf_link" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "Mini Militia Tournament",
+    posterUrl: "mini.jpg", // Add the URL of the event poster if available
+    details: "🥷 Are you ready to showcase your skills, forge alliances, and emerge victorious?\n\nEARNEST in association with 𝗔𝗗𝗩𝗬𝗞𝗔'𝟮𝟰 proudly presents an electrifying Mini Militia Tournament where warriors clash, alliances are forged, and champions rise.\n\n⚡Dominating the Battlefield:\nMini Militia Tournament ⚡\n\nMark your calendars, assemble your team, and let the battle begin!💥\n\n📆Date : 10th May\n🕒Time: 10:30am\n📍Mode of Conduct : Offline\n💰Prize worth 2.5k\n\n👥Maximum team of two can register\n❌Pls go through the rules and regulations in the google form\n\nReady to battle?\nRegistration fee : 30/-\n\n📞For further details:\nAkhil : +91 99955 82484\nShiyas : +91 6282 217 385",
+    link: "https://forms.gle/TLvQMKVDqfbsJWfT9" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "Crossword Jeopardy",
+    posterUrl: "cross.jpg", // Add the URL of the event poster if available
+    details: "\"Get ready for an intellectual showdown!\n\nEarnest, the Department of Electronics & Communication Engineering at College of Engineering Perumon, in collaboration with Advyka'24, presents:\n\n🧠 Jeopardy & Crossword Challenge 🧩\n\nPut your knowledge and wordplay skills to the test in a thrilling competition! Solve puzzles, answer trivia questions, and outsmart your opponents for a chance to win big!\n\nJoin us on:\n\n📝 12th MAY 2024\n🕘 11:00 AM\n📍 EC DEPARTMENT Seminar hall\n\nReg Fee: 20/- per team\n🏆 Prize Pool: 3K\n\nSecure your spot in this mind-bending challenge and prove your mastery!\n\nFor questions, contact our coordinators:\nGouri: +918921053929\nImrana: +919744941819",
+    link: "https://forms.gle/DdANmc7DBB2eZ5KLA" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "Chess Tournament",
+    posterUrl: "chess.jpg", // Add the URL of the event poster if available
+    details: "\"Master your moves by joining the competition where every move shapes your destiny, every game teaches you to conquer not just your opponent but also your limitations.\"\n\nEarnest, the Department of Electronics & Communication Engineering at College of Engineering Perumon, in collaboration with our Techno Cultural Fest, Advyka'24 is ecstatic in announcing the grand\n\n♟CHESS TOURNAMENT♟\n\nWhether you're a seasoned grandmaster or just beginning your chess journey, this event promises an unforgettable experience. Set your clocks, secure your 🫅 and 👸 and prepare your opening repertoire, for a grand clash awaits on\n\n📝 11th MAY 2024\n🕘 9.00 AM\n📍 EC DEPARTMENT\n\nREG FEE :- 100/-\n🏆 PRIZE POOL :- 5K\n\n👇Register now to secure your spot in history!👇",
+    link: "https://forms.gle/hxtaaEbMV8nSj5nT6" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "Push-Pull",
+    posterUrl: "pushup.jpg", // Add the URL of the event poster if available
+    details: "\"Strength does not come from physical capacity. It comes from an indomitable will.\" - Mahatma Gandhi\n\nHola peeps 🌟\n\n𝔼𝕒𝕣𝕟𝕖𝕤𝕥, 𝕥𝕙𝕖 𝔻𝕖𝕡𝕒𝕣𝕥𝕞𝕖𝕟𝕥 𝕠𝕗 𝔼𝕝𝕖𝕔𝕥𝕣𝕠𝕟𝕚𝕔𝕤 & ℂ𝕠𝕞𝕞𝕦𝕟𝕚𝕔𝕒𝕥𝕚𝕠𝕟 𝔼𝕟𝕘𝕚𝕟𝕖𝕖𝕣𝕚𝕟𝕘 𝕒𝕥 ℂ𝕠𝕝𝕝𝕖𝕘𝕖 𝕠𝕗 𝔼𝕟𝕘𝕚𝕟𝕖𝕖𝕣𝕚𝕟𝕘 ℙ𝕖𝕣𝕦𝕞𝕠𝕟, 𝕚𝕟 𝕔𝕠𝕝𝕝𝕒𝕓𝕠𝕣𝕒𝕥𝕚𝕠𝕟 𝕨𝕚𝕥𝕙 𝕠𝕦𝕣 𝕋𝕖𝕔𝕙𝕟𝕠 ℂ𝕦𝕝𝕥𝕦𝕣𝕒𝕝 𝔽𝕖𝕤𝕥, 𝔸𝕕𝕧𝕪𝕜𝕒'𝟚𝟜 𝕚𝕤 𝕥𝕙𝕣𝕚𝕝𝕝𝕖𝕕 𝕥𝕠 𝕦𝕟𝕧𝕖𝕚𝕝 𝕒 𝕤𝕡𝕖𝕔𝕚𝕒𝕝 𝕖𝕧𝕖𝕟𝕥\n\n🔥𝙋𝙐𝙎𝙃 & 𝙋𝙐𝙇𝙇🔥\n\nGet ready to flex your muscles and show off your strength at our Push-Up & Pull-Up Competition! 💥 Whether you're a seasoned athlete or just starting your fitness journey, this event is for you.\n\n📅 Date : 10-12 May 2024\n⏰ Time : 10:00 AM - 5:30PM\n📍Venue :EC Department\n\n𝘑𝘰𝘪𝘯 𝘶𝘴 𝘧𝘰𝘳 𝘢𝘯 𝘦𝘹𝘩𝘪𝘭𝘢𝘳𝘢𝘵𝘪𝘯𝘨 𝘴𝘩𝘰𝘸𝘥𝘰𝘸𝘯 𝘰𝘧 𝘴𝘵𝘳𝘦𝘯𝘨𝘵𝘩 𝘢𝘯𝘥 𝘥𝘦𝘵𝘦𝘳𝘮𝘪𝘯𝘢𝘵𝘪𝘰𝘯!\n\n📌Only sport registration are available\n\nRegistration Fee:-30 RS\n💰 Prize Pool:- 1K\n\n📲 For queries, contact\nViswajith : +919539242506\nMadhav : +919633231374",
+    link: "" // Add the registration link if available
+},{
+    deptname: "ECE",
+    name: "PERIOD CRAMPS SIMULATOR",
+    posterUrl: "period.jpg", // Add the URL of the event poster if available
+    details: "Step into someone else's shoes and experience what millions of people go through monthly. This interactive event offers a glimpse into the reality of period cramps and helps raise awareness and support.\n\nJoin us for an enlightening and eye-opening experience!\n\n📅 Date: May 11, 12\n\n💸 Reg fee: 20/-\n       Mode: Spot Reg\n\nFollow us on Instagram:\nhttps://www.instagram.com/earnest.cep?igsh=dTVxeGEyc2E2eWg=)\n\nFollow our whatsapp channel:\nhttps://whatsapp.com/channel/0029VacfgnAFy72LhsZZ9g2a\n\n📞For more details, contact:\nSam: 9446922962\nGouri: 8921053929\n\n#Earnest #Advyka24#CEP #PeriodCrampsSimulator",
+    link: "" // Registration link removed
+},{
+    deptname: "ECE",
+    name: "MINUTE TO WIN IT",
+    posterUrl: "minute.jpg", // Add the URL of the event poster if available
+    details: "Let's take a break from all the stress...we pave a way for all to chill...Blast Your Fun Experience💥\n\n🗓Date: May 10 , 12\n♦Venue: EC BLOCK\n\n☆Only Spot Registrations Are Available\n\n☆Reg Fee: 10/_\n\n💎STAY TUNED FOR SOME EXCITING PRIZES💎\n\nFollow us on instagram\nhttps://www.instagram.com/earnest.cep?igsh=dTVxeGEyc2E2eWg=\n\nFor Queries Contact📞\nVasundhara: 9562642074\nHaritha: 83040 79184\nPooja: 75105 98755\n\n#Earnest#Advyka'24#Cep #Minutetowinit",
+    link: "" // Registration link removed
+},{
+    deptname: "ECE",
+    name: "CARROMS TOURNAMENT",
+    posterUrl: "carroms.jpg", // Add the URL of the event poster if available
+    details: "Show off your skills in this classic indoor sport! Aim for precision, strategize your shots, and sink the carrommen like a pro. \n\n🗓 Dates: May 11, 12\n\nRegistration Fee: 20/-\n\nFollow us on Instagram for updates:\nhttps://www.instagram.com/earnest.cep?igsh=dTVxeGEyc2E2eWg=\n\nGet ready to aim, strike, and conquer! Don't miss out on this thrilling carroms challenge and win exciting prizes!\n\nFor more information, contact:\nSubin: +918089722853\nReju: +919400027022\n\n#Earnest #Advyka24 #CarromsTournament",
+    link: "" // Registration link removed
+},{
+    deptname: "ECE",
+    name: "SUMO WRESTLING",
+    posterUrl: "sumo.jpg", // Add the URL of the event poster if available
+    details: "Join us to experience raw energy and tradition of a sumo. It will bring a breathtaking evening featuring amazing explosive power.\n\n📅Date:May 11,12\n\nReg fee: 30/-\nReg mode: Spot\n\nFollow us on Instagram\nhttps://www.instagram.com/earnest.cep?igsh=dTVxeGEyc2E2eWg=\n\nFor more details contact:\nSaran:8891636624\nVishnu lal:8075565591\n\n#Earnest#Advyka24#Sumowrestling",
+    link: "" // Registration link removed
+},{
+    deptname: "ECE",
+    name: "Paperplane Contest",
+    posterUrl: "paper.jpg", // Add the URL of the event poster if available
+    details: "Challenge your friends and unleash your creative engineering skills with an exciting paperplane contest💫\n\n📅 Date : May(10,11,12) 2024\n📍 Venue : EC Dept\n\n     Registration Fee: Rs 10/-\n\nGet a chance to win exciting prizes🤩\n\n📲 For more details contact our coordinators\n\nSruthy : http://wa.me/+917736306221\nNikhil :http://wa.me/+917012237489\n\nFollow us on Instagram:\nhttps://www.instagram.com/earnest.cep?igsh=dTVxeGEyc2E2eWg=\n\n#Earnest #Advyka24 #JeopardyCrossword",
+    link: "" // Registration link removed
+},{
+    deptname: "CSE",
+    name: "DEBUG DASH",
+    posterUrl: "debug.jpg", // Add the URL of the event poster if available
+    details: "🔍 Are you ready to dive into the world of code debugging at DEBUG DASH? 💻 Join us for the ASCI '24 Debugging Contest and sharpen your skills in C programming! 🚀🔍\n\nPrepare to showcase your expertise and go head-to-head against other coding aficionados in this thrilling contest. 🏆 We've lined up some incredible prizes, so bring your best bug-squashing techniques and demonstrate your coding finesse! 💰💻\n\nDon't miss out on this chance to push your limits and have a blast with fellow coders. 💡 Save the date and be part of DEBUG DASH for an unforgettable coding challenge!\n\nSee you at ASCI '24 Let's make it an epic debugging adventure together! 😉✨\n\nPRIZE POOL\nWin a share of ₹1.5K\n\nCoordinators:-\nSabarish S: +91 6282746713\nVishnu R   : +91 7902288909\n\n📅Date: May 11\n⏰Time: 10:30 am to 11:00 am\n📝 FREE REGISTRATION\n🏫Venue: College of Engineering Perumon",
+    link: "https://forms.gle/nY5A2EPCA5xWAaYG8" // Add the registration link if available
+},{
+    deptname: "CSE",
+    name: "INCEPTO",
+    posterUrl: "incepto.jpg", // Add the URL of the event poster if available
+    details: "Join us for 'INCEPTO', a nation-wide 24-hour hackathon organised by IEDC CEP in association with ASCI happening at College of Engineering Perumon! 🚀 This event offers a unique opportunity for participants to explore their creativity and collaborate with peers who share their passion for innovation.\n\n📅 Date: 09 May 2024\n🕒 Time: 09:30 am\n⌛ Duration: 24 hrs\n📍 Venue: College of Engineering Perumon\n\nDon't miss this opportunity to unleash your creativity and collaborate with fellow enthusiasts in a marathon spirit! See you there! #INCEPTO #Hackathon #EngineeringPerumon\n\nContact us:\nHarikrishnan: +917902485392\nHabeeb: +91 97441 16364\n\nLast registration date: 05 May 2024",
+    link: "https://incepto24.vercel.app/" // Add the registration link if available
+},
+{
+    deptName: "CSE", // Department name left blank
+    name: "Blind Typing",
+    posterUrl: "blind.jpg", // Add the URL of the event poster if available
+    details: "Join us for a thrilling typing challenge where speed and accuracy reign supreme! 🚀\n\nShowcase your typing prowess and compete against other enthusiasts in this exciting event. 🏆 Fantastic prizes await, so bring your A-game and let your fingers fly across the keyboard! 💰\n\nDon't miss out on this opportunity to test your typing skills and connect with fellow participants. Save the date and be part of Blind Typing for an unforgettable typing adventure!\n\nSee you at the event! Let's make it a memorable typing challenge together! 😉\n\nPRIZE POOL\nWin a share of ₹1.5K!\n\nCoordinators\nSabarish S: +91 6282746713\nNiyas        : +91 8113823607\n\n📅 Date: May 12\n⏰ Time: 11:00 am to 11:30 am\n📝 FREE REGISTRATION\n🏫 Venue: College of Engineering Perumon",
+    link: "https://forms.gle/WVc2sRZdeigLtjnT8" // Registration link removed
+},{
+    deptName: "CSE", // Department name left blank
+    name: "CODEBLITZ",
+    posterUrl: "codeblitz.jpg", // Add the URL of the event poster if available
+    details: "Gear up for an electrifying journey into web development with CODEBLITZ, presented by ASCI! 💻 Join us at ADVYKA '24 for an adrenaline-pumping Web Development Contest, where you'll refine your skills in crafting awe-inspiring websites! 🚀🔍\n\nPrepare to showcase your coding prowess and go head-to-head with fellow developers in this exhilarating showdown. 🏆 With an enticing prize pool of ₹4,000 up for grabs, it's time to unleash your creativity and bring digital dreams to life! 💰💻\n\nDon't miss out on this golden opportunity—challenge yourself, network with like-minded developers, and create memories that last a lifetime. 💡 Mark your calendar and embark on a thrilling web development journey at CODEBLITZ, exclusively at ASCI 😉\n\nPRIZE POOL\nWin a share of 4K Rs!\n\n📅Date: May 12\n⏰Time: 1Pm - 4Pm\n📝 FREE REGISTRATION\n🏫Venue: College of Engineering Perumon",
+    link: "https://forms.gle/mU1ngjYRcyTxVUp46" // Registration link added
+}
+
+
+
+        ];
+
+        // Get the event name from the query parameter
+        const eventName = getQueryParam("event");
+
+        // Find the event by name
+        const event = events.find(event => event.name === eventName);
+
+        if (event) {
+            document.getElementById("eventName").textContent = event.name;
+            document.getElementById("deptname").textContent = event.deptname;
+            document.getElementById("eventPoster").innerHTML = `<img src="${event.posterUrl}" alt="Event Poster" style="max-width: 100%;">`;
+            document.getElementById("eventDetails").textContent = event.details;
+            document.getElementById("registerlink").href = event.link
+            document.title = event.name; 
+            if (event.link) {
+                document.getElementById("registerlink").href = event.link;
+            } else {
+                // Hide the register button if the link is not defined
+                document.getElementById("registerlink").style.display = "none";
+            } 
+        } else {
+            document.getElementById("eventName").textContent = "Event not found...";
+            // document.getElementById("registerlink").style.display = "none";
+            // document.querySelector('.back').classList.add('not-found');
+            // document.getElementById("about").style.display = "none";
+            
+            document.querySelector('.event-details').style.display = 'none';
+                document.getElementById('registerlink').style.display = 'inline-block';
+                document.querySelector('.back').classList.add('not-found');
+        }
+        
+    </script>
+</body>
+</html>
