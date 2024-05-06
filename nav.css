@@ -48,7 +48,7 @@ nav img {
   right: 0;
   bottom: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 15;
   background-color: rgb(71, 71, 71);
   background-image: linear-gradient(rgba(0, 0, 0, 0.632), rgba(0, 0, 0, 0.67)), url(logo1.png);
   background-size: contain;
@@ -89,7 +89,7 @@ nav img {
 
 /* ham */
 #nav-icon1 {
-  z-index: 11;
+  z-index: 14;
   width: 60px;
   height: auto;
   margin-top: 20px;
