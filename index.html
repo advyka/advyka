@@ -20,9 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* Ensure loader appears above other content */
+    z-index: 9995; /* Ensure loader appears above other content */
 }
         .loader {
+            z-index: 9999;
           --uib-size: 45px;
           --uib-color: rgb(255, 255, 255);
           --uib-speed: 1.75s;
@@ -469,12 +470,12 @@
 <script>
     // Function to show loader
 function showLoader() {
-    document.querySelector('.loader').style.display = 'block';
+    document.querySelector('.loadback').style.display = 'block';
 }
 
 // Function to hide loader
 function hideLoader() {
-    document.querySelector('.loader').style.display = 'none';
+    document.querySelector('.loadback').style.display = 'none';
 }
 
 // Show loader when the page starts loading
