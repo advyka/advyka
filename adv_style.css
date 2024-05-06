@@ -85,7 +85,7 @@
 
 .proin{
     margin-top: 0px;
-    margin-left: 800px;
+    margin-left: 500px;
     margin-bottom: 100px;
     display: flex;
 }
@@ -190,7 +190,7 @@
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
-    margin-right: 1000px;
+    margin-right: 700px;
     margin-top: 50px;
 }
   
