@@ -33,6 +33,7 @@ const availableKeywords = [
     "Autophotography Contest",
     "CRIME INVESTIGATION Competition “INVESITGATEX”",
     "Paintball Showdown by Vidyuth 6.0",
+    "SCRIPT INVERSO - Coding Competition by ASCI",
 ];
 
 const resultsBox = document.querySelector(".result-box");
