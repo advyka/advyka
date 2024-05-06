@@ -909,19 +909,23 @@
     justify-content: flex-start;
   }
 /* footer */
-footer {
+.footer {
+    z-index: 10;
     /* background-image: repeating-linear-gradient(356deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(311deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(446deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(401deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(401deg, rgb(17, 17, 17),rgb(66, 66, 66)); */
     background-image: url(advykatext.png);
     background-size: 1500px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #333;
+    background-color: #33333350;
+    backdrop-filter: blur(10px);
+    /* background-color: #333; */
     color: #fff; /* Text color */
     padding: 20px; /* Padding around the content */
     height: 400px;
 }
 
 #footer-content {
+    z-index: 14;
     max-width: 1200px; /* Maximum width of the footer content */
     margin: 0 auto; /* Center align the content */
     /* display: flex; */
