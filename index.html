@@ -10,10 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .loader {
-    --uib-size: 45px;
-    --uib-color: rgb(255, 255, 255);
-    --uib-speed: 1.75s;
+        .loadback{
     position: fixed;
     top: 0;
     left: 0;
@@ -24,9 +21,18 @@
     align-items: center;
     justify-content: center;
     z-index: 9999; /* Ensure loader appears above other content */
-    animation: rotate calc(var(--uib-speed) * 4) linear infinite;
 }
 
+        }
+        .loader {
+          --uib-size: 45px;
+          --uib-color: rgb(255, 255, 255);
+          --uib-speed: 1.75s;
+          position: relative;
+          height: var(--uib-size);
+          width: var(--uib-size);
+          animation: rotate calc(var(--uib-speed) * 4) linear infinite;
+        }
       
         @keyframes rotate {
           0% {
@@ -205,8 +211,8 @@
     <link rel="stylesheet" href="adv_style.css">
 </head>
 <body>
-    
-    <div class="loader">
+    <div class="loadback">
+        <div class="loader">
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
@@ -221,6 +227,8 @@
         <div class="particle"></div>
         <div class="particle"></div>
       </div>
+    </div>
+    
 <nav>
     <link rel="stylesheet" href="nav.css">
     <img src="logof.png" alt="G" id="logoi">
@@ -461,9 +469,9 @@
 </footer>
 <script src="main.js"></script>
 <script>
-// Function to show loader
+    // Function to show loader
 function showLoader() {
-    document.querySelector('.loader').style.display = 'flex';
+    document.querySelector('.loader').style.display = 'block';
 }
 
 // Function to hide loader
