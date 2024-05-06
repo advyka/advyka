@@ -23,6 +23,16 @@ const availableKeywords = [
     "INCEPTO",
     "Blind Typing",
     "CODEBLITZ",
+    "Bridge-O-Mania",
+    "ROBO DASH - ASCI '24 Maze Solving Challenge",
+    "CLASH OF MINDS: A Debate competition",
+    "KEL EXPO at ADVYKA'24 - VIDYUTH 6.0",
+    "KSEB EXPO at ADVYKA'24 - VIDYUTH 6.0",
+    "Solar System using PV System WORKSHOP",
+    "Circuit craze Cross Wire Competition",
+    "Autophotography Contest",
+    "CRIME INVESTIGATION Competition “INVESITGATEX”",
+    "Paintball Showdown by Vidyuth 6.0",
 ];
 
 const resultsBox = document.querySelector(".result-box");
