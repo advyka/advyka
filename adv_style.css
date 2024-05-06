@@ -933,9 +933,9 @@
     align-items: center; /* Vertically center the items */
 }
 
-#footer-content p {
-    margin: 0; /* Remove default margin for paragraphs */
-}
+/* #footer-content p {
+    margin: 0; 
+} */
 
 #footer-content ul {
     display: flex; 
@@ -946,7 +946,7 @@
 
 #footer-content ul li {
     font-size: 30px;/* Display list items horizontally */
-    margin-right: 10px; /* Add space between list items */
+    margin-right: 50px; /* Add space between list items */
 }
 
 #footer-content ul li:last-child {
