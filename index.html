@@ -39,6 +39,13 @@
     z-index: 9999; /* Ensure loader appears above other content */
     animation: rotate calc(var(--uib-speed) * 4) linear infinite;
 }
+@media (max-width: 500px){
+    .loader {
+    --uib-size: 80px;
+    margin-top: 300px;
+    margin-left: 200px;
+    }
+}
         @keyframes rotate {
           0% {
             transform: rotate(0deg);
